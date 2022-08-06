@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christys122/coders-blog.git"
+    "url": "git@https://github.com/christys122/coders-blog.git"
   },
   "keywords": [],
   "author": "",

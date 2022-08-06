@@ -1,11 +1,16 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-// connection to mysql db with username and password
-const sequelize = new Sequelize('all_coders_blog_db', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'mysql',
-  port: 3306
-});
+const sequelize = process.env.JAWSDB_URL
+  ? new Sequelize(process.env.JAWSDB_URL)
+  : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+      host: 'localhost',
+      dialect: 'mysql',
+    
+      port: 3306,
+      // dialectOptions: {
+      //   decimalNumbers: true,
+      // },
+    });
 
 module.exports = sequelize;
