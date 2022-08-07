@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 
-// get all users
+// get all posts
 router.get('/', (req, res) => {
   console.log('=====    =====    ======    ======');
   Post.findAll({
@@ -86,7 +86,6 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 router.put('/:id', (req, res) => {
   Post.update(

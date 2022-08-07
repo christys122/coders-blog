@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment, User, Post } = require('../../models');
+const { Comment } = require('../../models');
 
 router.get('/', (req, res) => {
   Comment.findAll()
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
+  // expects => {comment_text: "comment", user_id: 1, post_id: 2}
   Comment.create({
     comment_text: req.body.comment_text,
     user_id: req.session.user_id,

@@ -1,4 +1,4 @@
-const { Post } = require("../models");
+const { Post } = require('../models');
 
 const postdata = [
   {
@@ -30,3 +30,9 @@ const postdata = [
     title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     post_url: "https://stanford.edu/consequat.png",
     user_id: 1
+  }
+];
+
+const seedPosts = () => Post.bulkCreate(postdata);
+
+module.exports = seedPosts;

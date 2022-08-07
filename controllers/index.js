@@ -8,4 +8,4 @@ router.use((req, res) => {
 });
 
 
-module.eports = router;
+module.exports = router;

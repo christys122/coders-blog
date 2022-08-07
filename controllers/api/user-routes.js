@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-//get all posts
+//create user
 router.post('/', (req, res) => {
   // expects {username: '', email: '', password: ''}
   User.create({
