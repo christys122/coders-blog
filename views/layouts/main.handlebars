@@ -11,26 +11,31 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
+     
+      <nav>
+       
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout </button>
+        
+        <a href="/login">login</a>
+        
+      </nav>
+      <div>  </div>
+       <h1>
         <a href="/">All Coders Blog</a>
       </h1>
-      <nav>
-    {{#if loggedIn}}
-  <a href="/dashboard">dashboard</a>
-  <button id="logout" class="btn-no-style">logout</button>
-  {{else}}
-  <a href="/login">login</a>
-  {{/if}}
-      </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
     <footer>
-      Made by a coder for coders!
+      { Made by a coder for coders }
     </footer>
   </div>
-<script src="/javascript/logout.js"></script>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
